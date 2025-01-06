@@ -26,8 +26,8 @@ export class MapComponent implements OnInit {
     const kosarpalyak: Feature[] = [
       // Helyettesítsd a konkrét kosárpályák koordinátáival
       new Feature({
-        geometry: new Point(fromLonLat([19.040235, 47.497913])),
-        name: 'Kosárpálya 1'
+        geometry: new Point(fromLonLat([19.123219, 47.502874])),
+        name: 'Pillangó Park (beégetett)'
       })
     ];
 
