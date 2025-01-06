@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: './.env' });
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -15,6 +15,7 @@ mongoose.connect(process.env.DB_URI)
 // Egyszerű route
 app.get('/', (req, res) => {
   res.send('Backend működik');
+  console.log(process.env.DB_URI)
 });
 
 const courtsRouter = require('./routes/courts');
