@@ -39,7 +39,7 @@ export class MapComponent implements OnInit {
       source: vectorSource,
       style: new Style({
         image: new Icon({
-          src: '../../assets/icons/basketball-icon.png', // Helyettesítsd megfelelő ikonnal 
+          src: 'assets/icons/basketball-icon.png', // Helyettesítsd megfelelő ikonnal 
           scale: 0.1
         })
       })
