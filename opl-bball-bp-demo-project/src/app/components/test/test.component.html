@@ -1,0 +1,40 @@
+<div>
+    <h1>Welcome to {{ title }}!</h1>
+
+    <ng-template #defaultTemplate>
+        <!-- Template for AdditionalFeatureReszlet -->
+        <p class="defaultTemplate">
+            <strong *ngIf="additionalReszlet.label"
+                >{{additionalReszlet.label}}</strong
+            >
+            <span *ngIf="additionalReszlet.label">:&nbsp;</span>
+            <span class="tt" *ngIf="additionalReszlet.text"
+                >{{additionalReszlet.text}}</span
+            >
+            <span class="of-w-a" *ngIf="additionalReszlet.link">
+                <a
+                    [href]="additionalReszlet.link"
+                    target="_blank"
+                    rel="noopener"
+                    >{{additionalReszlet.link}}</a
+                >
+            </span>
+        </p>
+    </ng-template>
+
+    <ng-template #newDataTemplate>
+        <!-- Template for AdditionalFeatureReszletVerzio -->
+        <div class="newDataTemplate">
+            <div *ngFor="let hrsz of additionalReszletVerzio.helyrajziSzam">
+                <p>{{ hrsz }}</p>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-container
+        *ngTemplateOutlet="getTemplate(additionalReszlet)"
+    ></ng-container>
+    <ng-container
+        *ngTemplateOutlet="getTemplate(additionalReszletVerzio)"
+    ></ng-container>
+</div>
